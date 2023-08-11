@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.speechBubble {
+  border: none;
+  border-radius: 40px 10px;
+  background: gold;
+}
