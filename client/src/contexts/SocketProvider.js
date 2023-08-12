@@ -4,19 +4,19 @@ import io from 'socket.io-client'
 const SocketContext = React.createContext()
 
 export function useSocket() {
-	return useContext(SocketContext)
+  return useContext(SocketContext)
 }
 
 export function SocketProvider({ id, children }) {
-	// INITIALIZED SOCKET AS NULL HERE - THANKS YOUTUBE COMMENTS
-	const [socket, setSocket] = useState(null)
+  // INITIALIZED SOCKET AS NULL HERE - THANKS YOUTUBE COMMENTS
+  const [socket, setSocket] = useState(null)
 
-	useEffect(() => {
-		const newSocket = io('http://localhost:3000', { query: { id } })
-		setSocket(newSocket)
-		return () => newSocket.close()
-	}, [id])
-	return (
-		<SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
-	)
+  useEffect(() => {
+    const newSocket = io('http://localhost:3000', { query: { id } })
+    setSocket(newSocket)
+    return () => newSocket.close()
+  }, [id])
+  return (
+    <SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
+  )
 }
