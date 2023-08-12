@@ -14,6 +14,7 @@ export function ConversationsProvider({ id, children }) {
 	const [selectedConversationIndex, setSelectedConversationIndex] = useState(0)
 	const { contacts } = useContacts()
 	const socket = useSocket()
+
 	function createConversation(recipients) {
 		setConversations((prevConversations) => {
 			return [...prevConversations, { recipients, messages: [] }]
@@ -25,6 +26,7 @@ export function ConversationsProvider({ id, children }) {
 			setConversations((prevConversations) => {
 				let madeChange = false
 				const newMessage = { sender, text }
+				console.log('newMessage in convProvider: ', newMessage)
 				const newConversations = prevConversations.map((conversation) => {
 					if (arrayEquality(conversation.recipients, recipients)) {
 						madeChange = true
@@ -47,12 +49,17 @@ export function ConversationsProvider({ id, children }) {
 	)
 
 	useEffect(() => {
-		if (socket === null) return
-		socket.on('receive-message', addMessageToConversation)
-		return () => socket.off('receive-message')
+		// MADE SYNTAX FOR THIS BETTER??
+		if (socket === null) {
+			return
+		} else {
+			socket.on('receive-message', addMessageToConversation)
+			return () => socket.off('receive-message')
+		}
 	}, [socket, addMessageToConversation])
 
 	function sendMessage(recipients, text) {
+		console.log('sendMessage to Server contains: ', recipients, text)
 		socket.emit('send-message', { recipients, text })
 		addMessageToConversation({ recipients, text, sender: id })
 	}

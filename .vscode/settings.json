@@ -1,10 +1,10 @@
 {
-  "window.title": "~[server]~${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
+  "window.title": "~[client]~${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
   "workbench.colorCustomizations": {
-    "tab.activeBorder": "#2596be",
-    "titleBar.activeBackground": "#2596be",
+    "tab.activeBorder": "#34ebab",
+    "titleBar.activeBackground": "#34ebab",
     "titleBar.activeForeground": "#ffffff",
-    "statusBar.background": "#2596be",
+    "statusBar.background": "#34ebab",
     "statusBar.foreground": "#ffffff"
   }
 }
