@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationsProvider'
+import KeyPad from './KeyPad'
 
 export default function OpenConversation() {
   const [text, setText] = useState('')
+  const [input, setInput] = useState('')
 
   const setRef = useCallback((node) => {
     if (node) {
@@ -64,12 +66,16 @@ export default function OpenConversation() {
               onChange={(e) => setText(e.target.value)}
               style={{ height: '75px', resize: 'none' }}
             />
+
             <InputGroup.Text>
               <Button type="submit">Send</Button>
             </InputGroup.Text>
           </InputGroup>
         </Form.Group>
       </Form>
+      <KeyPad text={text} setText={setText} />
     </div>
   )
 }
+
+// somehow the input group
