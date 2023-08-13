@@ -1,19 +1,44 @@
 body {
-  margin: 0;
+ margin: 0;
+ padding: 2;
+  background-color: rgba(255, 166, 214, 1);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:rgba(19, 29, 120, 1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    color:rgba(19, 29, 120, 1);
+}
+.sideBar {
+  display: flex;
+  flex-direction:row;
+}
+.dashboard {
+  background-color: rgba(255, 166, 214, 1);
+  padding-bottom: 3rem;
+}
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color:rgba(19, 29, 120, 1);
 }
 
-.speechBubble {
-  border: none;
-  border-radius: 40px 10px;
-  background: gold;
+.bubble {
+  border: solid 0.5px rgba(19, 29, 120, 1);;
+  border-radius: 40px 40px 40px 0px;
+  background: rgba(117, 205, 255, 1);
+  color:rgba(19, 29, 120, 1);
 }
+
+.yourBubble {
+  background: rgb(136, 148, 255);
+  color: rgb(255, 255, 255);
+};
+

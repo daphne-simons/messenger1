@@ -9,13 +9,15 @@ import { SocketProvider } from '../contexts/SocketProvider'
 function App() {
 	const [id, setId] = useLocalStorage('id')
 	const dashboard = (
-		<SocketProvider id={id}>
-			<ContactsProvider>
-				<ConversationsProvider id={id}>
-					<Dashboard id={id} />
-				</ConversationsProvider>
-			</ContactsProvider>
-		</SocketProvider>
+		<div className="p-2 dashboard">
+			<SocketProvider id={id}>
+				<ContactsProvider>
+					<ConversationsProvider id={id}>
+						<Dashboard id={id} />
+					</ConversationsProvider>
+				</ContactsProvider>
+			</SocketProvider>
+		</div>
 	)
 	return id ? dashboard : <Login onIdSubmit={setId} />
 }
