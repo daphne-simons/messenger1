@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Form, InputGroup, Button } from 'react-bootstrap'
 import { useConversations } from '../contexts/ConversationsProvider'
+import KeyPad from './KeyPad'
 
 export default function OpenConversation() {
-	const [text, setText] = useState('')
+  
+  const [text, setText] = useState('')
+  const [input, setInput] = useState('')
 
 	const setRef = useCallback((node) => {
 		if (node) {
@@ -72,6 +75,8 @@ export default function OpenConversation() {
 					</InputGroup>
 				</Form.Group>
 			</Form>
+      <KeyPad text={text} setText={setText} />
 		</div>
 	)
 }
+
