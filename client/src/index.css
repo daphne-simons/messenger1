@@ -19,15 +19,44 @@ code {
   display: flex;
   flex-direction:row;
 }
+
+.app{
+  background-color: rgba(255, 166, 214, 1);
+  padding-bottom: 3rem;
+  border-radius: 4px;
+border: 1px solid #131D78;
+}
 .dashboard {
   background-color: rgba(255, 166, 214, 1);
   padding-bottom: 3rem;
+  border-radius: 4px;
+border: 1px solid #131D78;
+background: #75CDFF;
 }
 .headerDiv {
   display: flex;
+}
+
+.headContainer {
+  display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
+  border-radius: 4px;
+  border: 2px solid #131D78;
+  background: #F2E5EC;
+  padding: 1rem;
+  width: 50%;
+}
+header {
   color:rgba(19, 29, 120, 1);
+  color: #131D78;
+  text-shadow: -2px 2px 0px #FFA6D6;
+  font-family: DM Serif Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .bubble {

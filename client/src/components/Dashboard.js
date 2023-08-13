@@ -9,13 +9,13 @@ export default function Dashboard({ id }) {
 
 	return (
 		<div className="dashboard">
-			<div className="dashDiv">
+			<div className="headContainer">
 				<Header />
-				<div className="d-flex bg" style={{ height: '100vh' }}>
-					<Sidebar id={id} />
+			</div>
+			<div className="d-flex bg" style={{ height: '100vh' }}>
+				<Sidebar id={id} />
 
-					{selectedConversation && <OpenConversation />}
-				</div>
+				{selectedConversation && <OpenConversation />}
 			</div>
 		</div>
 	)
